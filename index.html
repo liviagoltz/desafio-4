@@ -4,37 +4,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contadores</title>
-  <!-- <style>
-    button{
-      width: 10rem;
-      height: 5rem;
-      font-size: 4rem;
-      background-color: red;
-      color: blueviolet;
+  <title>contador</title>
+ <style>
+    body{
+        background-color: rgb(255, 179, 179);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       flex-direction: column;
+       min-height: 100vh;
     }
-  </style> -->
+    h1{
+        color: red;
+        font-size: 45px;
+    }
+    button{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+       font-size: 30px;
+       background-color: rgb(182, 3, 3);
+       color: white;
+    }
+    button:hover{
+        background-color: rgb(83, 1, 1);
+    }
+ </style>
+
 </head>
 <body>
-  <h1 style="color: red;">contadores</h1>
-  <button onclick = "adicionar()">0</button>
-
+  <h1>contador</h1>
+  <button onclick = "adicionar1()"class="button1">0</button>
+  <button onclick = "mais2()"class="button2">0</button>
+ 
   <script>
-    var numero = 0;
+    let numero1= 0;
+    let numero2 = 0;
 
-    function adicionar() {
-     
-      numero++;
-      console.log("1");
+    function adicionar1() {   
+      numero1++;
       render();
     } 
 
+    function mais2() {     
+     numero2++;
+     render();
+   } 
+
     function render() {
-      document.querySelector("button").innerText ="Total"+numero;
-      console.log("2");
-
+     const button1= document.querySelector(".button1")
+     button1.innerText ="Total:"+numero1;
+     
+     
+     const button2= document.querySelector(".button2")
+     button2.innerText ="Total:"+numero2;
+ 
     }
-
+  
     render();
   </script>
 
