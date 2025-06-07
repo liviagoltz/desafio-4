@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Botão</title>
+<style>
+    h1{
+     color: red
+     ;
+    }
+</style>
+  </head>
+  <body>
+    <h1>Contador</h1>
+    <button onclick="adicionar()"></button>
+    <script>
+      var numero = 0;
+
+      function adicionar() {
+        numero++;
+        render();
+      }
+
+      function render() {
+        document.querySelector("button").innerText = numero;
+      }
+
+      render();
+    </script>
+  </body>
+</html>
